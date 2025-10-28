@@ -1,0 +1,82 @@
+<!-- SLIDE 6: Experimental Setup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental Setup</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center flex-shrink-0">
+            <h1 class="text-4xl font-bold" style="color: #003366;">Experimental Setup</h1>
+            <div class="w-24 h-1.5 mt-3 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow w-full flex flex-col justify-center space-y-8 mt-6">
+
+            <!-- Row 1: Dataset -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+                <h2 class="text-3xl font-bold text-blue-800 flex items-center mb-3">
+                    <i class="fas fa-database mr-4"></i>Dataset: CIC-IDS2017
+                </h2>
+                <div class="text-xl text-gray-700">
+                    <p>A large-scale, realistic benchmark for IDS with over 2.8 million network flows.</p>
+                    <p class="mt-1">We formulate this as a binary classification task: <strong class="font-semibold">BENIGN</strong> vs. <strong class="font-semibold text-red-600">ATTACK</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Row 2: Models for Comparison -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gray-500">
+                <h2 class="text-3xl font-bold text-gray-800 flex items-center mb-3">
+                    <i class="fas fa-balance-scale mr-4"></i>Models for Comparison
+                </h2>
+                <div class="grid grid-cols-2 gap-x-8 text-xl text-gray-700">
+                    <div>
+                        <h3 class="font-bold">Classical LSTM (Baseline)</h3>
+                        <p>LSTM feature extractor + classical MLP classifier.</p>
+                    </div>
+                     <div>
+                        <h3 class="font-bold">Hybrid QLSTM (Ours)</h3>
+                        <p>LSTM feature extractor + Quantum (PQC) classifier. We test variants with 4 and 8 qubits.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row 3: Metrics -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+                <h2 class="text-3xl font-bold text-green-800 flex items-center mb-3">
+                    <i class="fas fa-chart-pie mr-4"></i>Key Evaluation Metrics
+                </h2>
+                <div class="flex justify-around items-center text-xl text-center font-semibold text-gray-800 mt-4">
+                    <span class="text-red-600">Precision</span>
+                    <span class="text-blue-600">Recall</span>
+                    <span>F1-Score</span>
+                    <span>Accuracy</span>
+                </div>
+                 <p class="text-center text-lg mt-3 text-gray-600">Focusing on the trade-off between <strong class="text-red-600">Precision</strong> and <strong class="text-blue-600">Recall</strong>.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide" class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-left text-6xl"></i></a>
+    <a id="next-slide" class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-right text-6xl"></i></a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

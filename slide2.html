@@ -1,0 +1,79 @@
+<!-- SLIDE 2: Agenda -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">Agenda</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-5xl flex items-center justify-center">
+            <div class="space-y-8">
+                <div class="flex items-center text-3xl text-gray-800">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-balance-scale text-3xl" style="color: #003366;"></i>
+                    </div>
+                    <span>1. Motivation: The Precision-Recall Trade-off in IDS</span>
+                </div>
+                <div class="flex items-center text-3xl text-gray-800">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-atom text-3xl" style="color: #003366;"></i>
+                    </div>
+                    <span>2. The Quantum Approach: Our Hybrid QLSTM Model</span>
+                </div>
+                <div class="flex items-center text-3xl text-gray-800">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-vials text-3xl" style="color: #003366;"></i>
+                    </div>
+                    <span>3. Experimental Setup</span>
+                </div>
+                <div class="flex items-center text-3xl text-gray-800">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-chart-bar text-3xl" style="color: #003366;"></i>
+                    </div>
+                    <span>4. Uncovering the Trade-off: Results & Analysis</span>
+                </div>
+                <div class="flex items-center text-3xl text-gray-800">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6">
+                        <i class="fas fa-flag-checkered text-3xl" style="color: #003366;"></i>
+                    </div>
+                    <span>5. Conclusion: The Value of High-Fidelity IDS</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+
+</html>

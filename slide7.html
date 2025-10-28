@@ -1,0 +1,99 @@
+<!-- SLIDE 7: Uncovering the Trade-off: Results -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results: The Trade-off</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center flex-shrink-0">
+            <h1 class="text-4xl font-bold" style="color: #003366;">Uncovering the Precision-Recall Trade-off</h1>
+            <div class="w-24 h-1.5 mt-3 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area: Bố cục 2 cột -->
+        <div class="flex-grow grid grid-cols-2 gap-8 items-center mt-4">
+            
+            <!-- CỘT TRÁI: Bảng kết quả (Table 1) -->
+            <div class="col-span-1 h-full flex flex-col items-center justify-center">
+                <h2 class="text-2xl font-bold text-gray-700 mb-2">Performance on CIC-IDS2017 Test Set</h2>
+                <div class="w-full bg-white rounded-lg shadow-xl overflow-hidden text-lg">
+                    <table class="w-full text-center">
+                        <thead class="bg-gray-800 text-white font-semibold">
+                            <tr>
+                                <th class="py-3 px-2">Model Configuration</th>
+                                <th class="py-3 px-2 text-red-300">Precision</th>
+                                <th class="py-3 px-2 text-blue-300">Recall</th>
+                                <th class="py-3 px-2">F1-Score</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-800">
+                            <tr class="bg-gray-200">
+                                <td class="py-3 px-2 font-semibold">Classical LSTM</td>
+                                <td class="py-3 px-2">0.9117</td>
+                                <td class="py-3 px-2 font-bold text-blue-700">0.9825</td>
+                                <td class="py-3 px-2 font-bold">0.9457</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="py-3 px-2 font-semibold">QLSTM-4Q-32H</td>
+                                <td class="py-3 px-2 font-bold text-red-700">0.9250</td>
+                                <td class="py-3 px-2">0.9420</td>
+                                <td class="py-3 px-2">0.9334</td>
+                            </tr>
+                            <tr class="bg-gray-100">
+                                <td class="py-3 px-2 font-semibold">QLSTM-4Q-64H</td>
+                                <td class="py-3 px-2">0.9181</td>
+                                <td class="py-3 px-2">0.9624</td>
+                                <td class="py-3 px-2">0.9397</td>
+                            </tr>
+                            <tr class="bg-green-100 border-t-2 border-b-2 border-green-400">
+                                <td class="py-3 px-2 font-bold">QLSTM-8Q-32H</td>
+                                <td class="py-3 px-2 font-extrabold text-red-700 text-xl">0.9312</td>
+                                <td class="py-3 px-2">0.9396</td>
+                                <td class="py-3 px-2">0.9354</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: Biểu đồ và diễn giải -->
+            <div class="col-span-1 h-full flex flex-col justify-center space-y-6">
+                 <div class="w-full bg-white p-4 rounded-xl shadow-lg" style="height: 280px;">
+                    <img src="images/figure2_performance_chart.png" alt="Performance Comparison Chart" 
+                         class="w-full h-full object-contain">
+                </div>
+                <div class="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-500">
+                    <h3 class="text-2xl font-bold text-yellow-800 flex items-center mb-3">
+                        <i class="fas-lightbulb mr-3"></i>Key Finding: A Clear Trade-off
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-xl text-gray-700">
+                        <li>The <strong class="font-semibold text-blue-700">Classical LSTM</strong> achieves the highest Recall and F1-Score, meaning it catches the most attacks.</li>
+                        <li>All <strong class="font-semibold text-red-700">QLSTM models</strong> consistently achieve higher Precision, meaning they produce fewer false alarms.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/4 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide" class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-left text-6xl"></i></a>
+    <a id="next-slide" class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-right text-6xl"></i></a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

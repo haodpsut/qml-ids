@@ -1,0 +1,54 @@
+<!-- SLIDE 10: Thank You & Q&A -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You & Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative text-center">
+
+        <div class="flex-grow flex flex-col justify-center items-center">
+            <h1 class="text-8xl font-bold" style="color: #003366;">Thank You!</h1>
+            <div class="w-32 h-2 mt-6" style="background-color: #2196F3;"></div>
+            
+            <p class="mt-12 text-5xl text-gray-700">Questions?</p>
+
+            <div class="mt-20 border-t-2 border-gray-300 pt-8 w-full max-w-4xl">
+                <h2 class="text-2xl font-semibold text-gray-600 mb-4">Contact & Code</h2>
+                <div class="grid grid-cols-2 gap-8 text-lg text-gray-800">
+                    <div>
+                        <p class="font-bold">Truong Duy Dinh (Corr. Author)</p>
+                        <p class="text-sm">duydt@ptit.edu.vn</p>
+                    </div>
+                    <div>
+                        <p class="font-bold"><i class="fab fa-github mr-2"></i>Source Code</p>
+                        <p class="text-sm">github.com/ailabteam/qml-ids</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide" class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-left text-6xl"></i></a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

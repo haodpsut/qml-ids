@@ -1,0 +1,74 @@
+<!-- SLIDE 8: Analysis of Classification Errors -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Classification Errors</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center flex-shrink-0">
+            <h1 class="text-4xl font-bold" style="color: #003366;">What Does Higher Precision Mean in Practice?</h1>
+            <div class="w-24 h-1.5 mt-3 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area: Bố cục 2 cột -->
+        <div class="flex-grow grid grid-cols-2 gap-8 items-center mt-4">
+            
+            <!-- CỘT TRÁI: Confusion Matrix (Figure 3) -->
+            <div class="col-span-1 h-full flex flex-col items-center justify-center">
+                <h2 class="text-2xl font-bold text-gray-700 mb-2">Confusion Matrix of QLSTM (8-Qubit)</h2>
+                 <div class="w-full bg-white p-4 rounded-xl shadow-lg" style="height: 400px;">
+                    <img src="images/figure3_confusion_matrix_qlstm.png" alt="QLSTM Confusion Matrix" 
+                         class="w-full h-full object-contain">
+                </div>
+                <p class="text-sm text-gray-500 mt-2 italic">Fig. 3. The QLSTM model misclassified only 7,723 benign instances as attacks (False Positives).</p>
+            </div>
+
+            <!-- CỘT PHẢI: So sánh và diễn giải -->
+            <div class="col-span-1 h-full flex flex-col justify-center space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <h3 class="text-2xl font-bold text-red-700">False Positives (False Alarms)</h3>
+                    <div class="mt-4 grid grid-cols-2 gap-4 items-center">
+                        <div>
+                            <p class="text-xl text-gray-600">Classical LSTM</p>
+                            <p class="text-5xl font-bold text-gray-800 my-2">10,879</p>
+                        </div>
+                         <div class="border-l-2">
+                            <p class="text-xl font-bold text-blue-800">QLSTM (8-Qubit)</p>
+                            <p class="text-5xl font-bold text-blue-800 my-2">7,723</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 text-center">
+                    <h3 class="text-3xl font-bold text-green-800 flex items-center justify-center mb-3">
+                        <i class="fas fa-arrow-down mr-3"></i>29% Reduction in False Alarms
+                    </h3>
+                    <p class="text-xl text-gray-700">The higher precision of the QLSTM model translates directly into a <strong class="font-semibold">29% reduction in the number of false alarms</strong> compared to the classical baseline.</p>
+                     <p class="text-xl text-gray-700 mt-3">This is a significant improvement for operational security, reducing analyst fatigue and allowing them to focus on real threats.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide" class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-left text-6xl"></i></a>
+    <a id="next-slide" class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-right text-6xl"></i></a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

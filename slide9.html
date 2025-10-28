@@ -1,0 +1,71 @@
+<!-- SLIDE 9: Conclusion -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center">
+            <h1 class="text-5xl font-bold" style="color: #003366;">Conclusion</h1>
+            <div class="w-24 h-1.5 mt-4 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow w-full max-w-5xl flex flex-col justify-center space-y-8 mt-8">
+
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <i class="fas fa-balance-scale-right text-5xl text-yellow-500 mr-6 mt-1"></i>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">A Valuable Trade-off Uncovered</h2>
+                    <p class="text-xl text-gray-700 mt-2">Our central finding is that hybrid QLSTM models offer a different, valuable performance profile: they consistently achieve <strong class="font-semibold">superior precision</strong> at the cost of slightly lower recall compared to classical LSTMs.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <i class="fas fa-shield-alt text-5xl text-green-500 mr-6 mt-1"></i>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">The Practical Value of High Fidelity</h2>
+                    <p class="text-xl text-gray-700 mt-2">This trade-off is crucial for real-world security operations. By significantly <strong class="font-semibold">reducing false alarms (~29%)</strong>, QML offers a path toward high-fidelity IDS that enhance analyst efficiency and trust.</p>
+                </div>
+            </div>
+
+             <div class="w-full max-w-4xl mt-6 text-center p-4 bg-blue-50 rounded-lg">
+                <h3 class="text-2xl font-bold" style="color: #003366;">Final Message</h3>
+                <p class="text-xl text-gray-700 mt-2">Quantum Machine Learning may not be a universal replacement for classical models, but it is a powerful tool to explore <span class="font-bold">new performance profiles and trade-offs</span> that are vital for practical applications.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

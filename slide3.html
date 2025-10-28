@@ -1,0 +1,76 @@
+<!-- SLIDE 3: Motivation: The Precision-Recall Trade-off -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">The Critical Challenge in Operational IDS</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow grid grid-cols-2 gap-12 items-center mt-8">
+            <!-- Cột bên trái: High Recall -->
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-bullseye text-3xl mr-4 text-blue-500"></i>High Recall (Catching Attacks)
+                </h2>
+                <ul class="space-y-3 text-lg text-gray-700">
+                    <li class="flex"><i class="fas fa-check-circle text-green-500 mt-1.5 mr-3"></i><span>Classical LSTMs are great at identifying the vast majority of true attacks.</span></li>
+                    <li class="flex"><i class="fas fa-check-circle text-green-500 mt-1.5 mr-3"></i><span>This minimizes the risk of missing a critical security incident (low False Negatives).</span></li>
+                    <li class="flex"><i class="fas fa-info-circle text-blue-500 mt-1.5 mr-3"></i><span>This is often reflected by a high F1-Score in academic benchmarks.</span></li>
+                </ul>
+            </div>
+
+            <!-- Cột bên phải: Low Precision -->
+            <div class="bg-red-50 p-8 rounded-lg border-l-4 border-red-500">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-bell text-3xl mr-4 text-red-500"></i>The Cost: Low Precision (False Alarms)
+                </h2>
+                <ul class="space-y-3 text-lg text-gray-700">
+                    <li class="flex"><i class="fas fa-exclamation-triangle text-red-500 mt-1.5 mr-3"></i><span>High recall often comes at the cost of misclassifying many benign activities as attacks.</span></li>
+                    <li class="flex"><i class="fas fa-user-shield text-red-500 mt-1.5 mr-3"></i><span>This creates a high number of <strong>False Positives</strong>, leading to "alert fatigue" for SOC analysts.</span></li>
+                    <li class="flex"><i class="fas fa-times-circle text-red-500 mt-1.5 mr-3"></i><span>Too many false alarms can cause real threats to be overlooked.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center p-4 bg-yellow-50 rounded-lg w-full max-w-5xl">
+            <h3 class="text-2xl font-bold" style="color: #003366;">The Operational Goal:</h3>
+            <p class="text-xl text-gray-700 mt-2">Can we find a model that prioritizes <span class="font-bold">high-fidelity alerts</span> (high precision) to build a more trustworthy and efficient IDS, even if it means a slight drop in overall recall?</p>
+        </div>
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!-- SLIDE 1: Title Slide -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Quantum-Classical LSTM for NIDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <div class="absolute top-0 left-0 w-full h-3" style="background-color: #003366;"></div>
+        
+        <div class="text-center">
+            <h1 class="text-5xl font-bold" style="color: #003366;">Navigating the Precision-Recall Trade-off in Network Intrusion Detection with a Hybrid Quantum-Classical LSTM</h1>
+            <p class="mt-8 text-2xl text-gray-700">A Quantum Machine Learning Approach for High-Fidelity IDS</p>
+        </div>
+
+        <div class="mt-20 text-center w-full max-w-6xl grid grid-cols-4 gap-8 text-lg">
+            <div>
+                <p class="font-bold" style="color: #003366;">Phuc Hao Do</p>
+                <p class="text-gray-600 text-sm">Danang Architecture University</p>
+            </div>
+            <div>
+                <p class="font-bold" style="color: #003366;">Tran Duc Le</p>
+                <p class="text-gray-600 text-sm">University of Wisconsin-Stout</p>
+            </div>
+            <div>
+                <p class="font-bold" style="color: #003366;">Truong Duy Dinh</p>
+                <p class="text-gray-600 text-sm">Posts and Telecommunications Institute of Technology</p>
+            </div>
+            <div>
+                <p class="font-bold" style="color: #003366;">Van Dai Pham</p>
+                <p class="text-gray-600 text-sm">Swinburne Vietnam, FPT University</p>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Hybrid Quantum-Classical LSTM for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+
+</html>
